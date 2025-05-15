@@ -63,7 +63,8 @@ main .btns a{
 }
 
 .install{
-    background-color: #111;
+    /* background-color: #111; */
+    background-color: gray;
 }
 
 .install:hover{
