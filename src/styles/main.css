@@ -1,72 +1,288 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: linear-gradient(to bottom, #111827, #022c22);
     font-family: 'Roboto', sans-serif;
-}
-
-main{
-    background-color: #303030;
-    width: 80%;
-    border-radius: 28px;
-    overflow: hidden;
     display: flex;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    width: 90%;
+    max-width: 1200px;
     padding: 1rem;
 }
 
-main img{
-    width: 128px;
-    border-radius: 1rem;
+.logo {
+    position: relative;
 }
 
-main h1{
-    color: white;
-    font-weight: 600;
-}
-
-main p{
-    color: white;
-    text-align: center;
-    margin-top: -10px;
-}
-
-main .btns{
-    margin-top: 10px;
-}
-
-main .btns button,
-main .btns a{
-    padding: 12px 24px;
+.logo img {
+    width: 150px;
+    border: 2px solid #34d399;
     border-radius: 8px;
+}
+
+.logo p {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    background-color: #34d399;
+    padding: 4px 12px;
+    border-radius: 24px;
+    bottom: -20px;
+    right: -4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.title {
+    color: #34d399;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.ip {
+    border: 1px solid #34d399;
+    padding: 8px;
+    margin-bottom: 12px;
+    color: #34d399;
+    border-radius: 6px;
+    margin-top: -0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    gap: 8px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.ip button {
+    background-color: transparent;
     border: none;
+    color: #34d399;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 4px;
+    transition: background 300ms ease-in-out;
+    padding: 0 5px;
+    flex-shrink: 0;
+}
+
+.ip button:hover {
+    background-color: #022c22;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.info p {
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    transition: all 300ms ease-in-out;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+
+.info p i {
+    color: #34d399;
+}
+
+.text {
+    color: #D1D5DB;
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.buttons a {
+    border-radius: 8px;
+    padding: 10px 20px;
     text-decoration: none;
+    font-size: 0.9rem;
+    width: 160px;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+    margin: 0.25rem;
 }
 
-.download{
-    background-color: #6003A3;
+.download {
+    background-color: #34d399;
+    color: white;
 }
 
-.download:hover{
-    background-color: #4a067a;
+.download:hover {
+    background-color: #047857;
 }
 
-.install{
-    /* background-color: #111; */
-    background-color: gray;
+.install {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #34d399;
+    color: #34d399;
 }
 
-.install:hover{
-    background-color: #000000;
+.install:hover {
+    background-color: #022c22;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 16px 0;
+}
+
+footer h1 {
+    color: #D1D5DB;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+}
+
+footer .socials {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+footer .socials a i {
+    color: #D1D5DB;
+    transition: all 300ms ease-in-out;
+    font-size: 20px;
+}
+
+footer .socials a i:hover {
+    transform: scale(1.3);
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 2rem;
+    }
+    
+    .logo img {
+        width: 120px;
+    }
+    
+    .logo p {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+        bottom: -15px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .ip {
+        width: 180px;
+        font-size: 0.8rem;
+    }
+    
+    .buttons a {
+        width: 140px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .logo img {
+        width: 140px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .text {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo img {
+        width: 160px;
+    }
+    
+    .title {
+        font-size: 2.8rem;
+    }
+    
+    .text {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1025px) {
+    main {
+        margin-top: 6rem;
+    }
+    
+    .logo img {
+        width: 180px;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    .text {
+        max-width: 60%;
+        font-size: 1rem;
+    }
+    
+    .buttons a {
+        width: 200px;
+        font-size: 1rem;
+    }
+    
+    footer h1 {
+        font-size: 1rem;
+    }
+    
+    footer .socials a i {
+        font-size: 24px;
+    }
 }

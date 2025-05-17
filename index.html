@@ -3,28 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon">
     <title>Minecraft ITLA</title>
 </head>
 <body>
     <main>
-        <img src="./src/images/logo.png" alt="logo">
-        <h1>MineCraft ITLA</h1>
-        <p>
-            ¡Disfruta de una experiencia inolvidable al probar nuestro
-            ModPack, Haz click en el botón de descargar y comienza una nueva aventura!
-        </p>
-
-        <div class="btns">
-            <a href="https://download1530.mediafire.com/ciqpqmlw6lcguy365Foma8-mzVKMp4A0uXEVe46Ub1U3_1i5U4vEXuK7nF8KdNyl84idqhmVtlN0Bf53DGNbDjUoBAGQtZXzZz5nTJAf4n4gH0QPSH1RqQlnOfiEg0UXgQASSXB_UTGwKSDfW9AdItSJHk17p8OKmpgSUVNyvv-7COQ/y5gmc5bllomo7dp/ModPackv2.zip" class="download">Descarga el ModPack</a>
-            <button id="install" class="install">Guía de instalación</button>
+        <div class="logo">
+            <img src="./src/images/logo.png" class="logo">
+            <p id="status"></p>
         </div>
-
-        <p id="error" style="margin-top: 18px; color:red; margin-bottom:16px;"></p>
-
-        <p style="color: gray; margin-top: 18px;">Sitio web hecho por Yoscar</p>
+    
+        <h1 class="title">Minecraft ITLA</h1>
+    
+        <div class="ip">
+            <span id="ip"></span>
+            <button id="copy-ip"><i class='bx bx-copy'></i></button>
+        </div>
+    
+        <div class="info">
+            <p><i class='bx bx-server'></i> Versión: <span id="version"></span></p>
+            <p><i class='bx bx-user'></i> Jugadores: <span id="players"></span></p>
+            <p><i class='bx bx-download'></i> ModPack: <span>Terror/Aventura</span></p>
+        </div>
+    
+        <p class="text">
+            ¡Disfruta de una experiencia inolvidable al provar nuestro ModPack! Haz 
+            click en el botón de descargar y comienza una nueva aventura.
+        </p>
+    
+        <div class="buttons">
+            <a href="" class="download">
+                <i class='bx bx-download'></i> Descargar el ModPack
+            </a>
+            <a href="" class="install">
+                <i class='bx bx-file'></i> Guía de Instalación
+            </a>
+        </div>
     </main>
-
+    <footer>
+        <h1>Sitio web hecho por YoscarMJP • 2025 © MineCraft ITLA</h1>
+        <div class="socials">
+            <a href="https://discord.gg/rmphHmBVv2"><i class='bx bxl-discord-alt'></i></a>
+            <a href="https://chat.whatsapp.com/LJg7oWnhQTWGAaJ6Kaqbz7"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+    </footer>
     <script src="./src/scripts/app.js"></script>
 </body>
 </html>
